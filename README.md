@@ -123,7 +123,7 @@ There are 6 instruction formats in RISC-V:
 R-type instructions are used for operations that involve only registers. These instructions typically perform arithmetic, logical, and shift operations.
 
 Format: 
-![R-Type Instruction format](image.png)
+![R-Type Instruction format](<Task-3/R-Type%20instruction%20format.png>)
 
 * Opcode(opcode): A 6-bit operation code (0110011 for register - register operation).
 * First source register(rs1): A 5-bit register address.
@@ -135,7 +135,7 @@ Format:
 In I-type instruction, I stand for immediate which means that operations use Registers and Immediate value for their execution and are not related with memory location.This instruction type is used in immediate and load operations.
 
 Format:
-![I-Type Instruction format](image-1.png)
+![I-Type Instruction format](Task-3/I-Type%20instructions%20format.png)
 
 - Opcode: A 6-bit field that specifies the operation(0010011 for immediate arithmetic operations).
 - Destination register: The register where the result is stored.
@@ -147,7 +147,7 @@ Format:
 S-type instructions are used to store data from a register to memory. The S-type instruction format is a 32-bit instruction format with a 12-bit immediate field.
 
 Format:
-![S-Type Instruction Format](image-2.png)
+![S-Type Instruction Format](<Task-3/S-Type instruction format.png>)
 
 * Opcode(opcode): A 6-bit operation code (0100011 for store operation).
 * imm: Immediate value (split into imm[11:5] and imm[4:0]).
@@ -159,7 +159,7 @@ Format:
 B-type instructions are used for conditional branches in RISC-V instruction sets.
 
 Format:
-![B-Type Instruction Format](<Screenshot 2025-01-14 114304-1.png>)
+![B-Type Instruction Format](<Task-3/B-Type Instruction Format.png>)
 
 * Opcode(opcode): A 6-bit operation code (1100011 for Branch operations).
 * imm: Immediate value (split into imm[12], imm[10:5], imm[4:1], imm[11]).
@@ -171,7 +171,7 @@ Format:
 U-Type instructions are used for operations like loading upper immediate (LUI) and adding upper immediate to PC (AUIPC).
 
 Format:
-![U-Type Instruction Format](<Screenshot 2025-01-14 115924-1.png>)
+![U-Type Instruction Format](<Task-3/U-type instructions type.png>)
 
 * Opcode(opcode): A 6-bit operation code (0110111 for LUI operations).
 * Destination register(rd): A 5-bit register address.
@@ -181,7 +181,7 @@ Format:
 A J-type instruction is a type of MIPS instruction that specifies a target address for a jump.
 
 Format:
-![J-Type Instructions Format](<Screenshot 2025-01-14 120433.png>)
+![J-Type instruction format](<Task-3/J-Type instruction format.png>)
 
 * Opcode(opcode): A 6-bit operation code (1101111 for Jump operations).
 * Destination register(rd): A 5-bit register address.
