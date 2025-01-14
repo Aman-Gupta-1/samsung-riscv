@@ -4,7 +4,7 @@
 
 1. Install Ubuntu on Virtual Machine Box
 
-![alt text](<virtualbox installation.png>)
+![alt text](<Task-1/virtualbox installation.png>)
 
 2. Install leafpad 
 
@@ -12,7 +12,7 @@ Install leafpad using command:
 
     sudo apt install leafpad
 
-![alt text](<leafpad installed.png>)
+![alt text](<Task-1/leafpad installed.png>)
 
 3. C language Based lab
 
@@ -23,14 +23,14 @@ Commands:-
     leafpad sum1ton.c &
     cat sum1ton.c
 
-![alt text](<c code sum1ton.png>) 
+![alt text](<Task-1/c code sum1ton.png>) 
 
 Compile C code using following command
 
     gcc sum1ton.c
     ./a.out
 
-![alt text](<c code compilation.png>)
+![alt text](<Task-1/c code compilation.png>)
 
 4. RISCV based LAB
 
@@ -44,13 +44,13 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 
         riscv64-unknown-elf-objdump -d sum1ton.o | less
 
-![alt text](<O1 riscv  code.png>)
+![alt text](<Task-1/O1 riscv  code.png>)
 
 3. The Assembly Language code of our C code will be displayed on the terminal. Type /main to locate the main section of our code.
 
 4. Change option -O1 to -Ofast and observe the changes.
 
-![alt text](<Ofast riscv code.png>)
+![alt text](<Task-1/Ofast riscv code.png>)
 
 Assemply code generated using -O1 option has more number of instruction as compared to Assemply code generated using -Ofast option.
 
@@ -69,7 +69,7 @@ Open the debugger in another terminal by using the following command
 
     spike -d pk sum_1ton.o
 
-![alt text](<Spike debug sum1ton.png>)
+![alt text](<Task-2/Spike debug sum1ton.png>)
 
 2. Compile a C program for a basic application( Factorial of a Number ) using RISC-V GCC/SPIKE.
 
@@ -84,17 +84,17 @@ For GCC,
     gcc factorial.c 
     ./a.out
 
-![alt text](<factorial c code and compilation using gcc, riscv-gcc, spike-1.png>)
+![alt text](<Task-2/factorial c code and compilation using gcc, riscv-gcc, spike-1.png>)
 
 For RISC-V,
 
     riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o factorial.o factorial.c
 
-![alt text](<O1 assembly code for factorial c code.png>)
+![alt text](<Task-2/O1 assembly code for factorial c code.png>)
 
     riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o factorial.o factorial.c
 
-![alt text](<Ofast assemble code for factorial c code.png>)
+![alt text](<Task-2/Ofast assemble code for factorial c code.png>)
 
 To confirm the output of gcc compiler use command,
 
@@ -104,7 +104,7 @@ To debug the assembly instructions using spike,
 
     spike -d pk factorial.o 
 
-![alt text](<factorial c code and compilation using gcc, riscv-gcc, spike.png>)
+![alt text](<Task-2/factorial c code and compilation using gcc, riscv-gcc, spike.png>)
 
 > ##### Task 3: Task is to identify instruction type of all the given instructions with its exact 32 bits instruction code in the desired instruction type format
 
