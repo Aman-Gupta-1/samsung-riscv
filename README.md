@@ -1,6 +1,6 @@
 ##### RISC-V Talent Development Program, where we learn about RISC-V processor and VLSI Design using various open source tools. The instructor for this program is Kunal Ghosh Sir.
 
-###### Task 1: Task is to install all the essential tools required for this internship such as Ubuntu on VMBox, Leafpad, and to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler.
+##### Task 1: Task is to install all the essential tools required for this internship such as Ubuntu on VMBox, Leafpad, and to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler.
 
 1. Install Ubuntu on Virtual Machine Box
 
@@ -57,7 +57,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 
 Assemply code generated using -O1 option has more number of instruction as compared to Assemply code generated using -Ofast option.
 
-###### Task 2: Compile the C program using RISC-V GCC/SPIKE with the O1 and Ofast optimization options.
+##### Task 2: Compile the C program using RISC-V GCC/SPIKE with the O1 and Ofast optimization options.
 
 1. The target is to run the sum1ton.c code using both gcc compiler and riscv compiler, and both of the compiler must display the same output on the terminal. So to compile the code using gcc compiler, use the following command:
 
@@ -109,9 +109,9 @@ To debug the assembly instructions using spike,
 
 ![alt text](<Task-2/factorial c code and compilation using gcc, riscv-gcc, spike.png>)
 
-###### Task 3: Task is to identify instruction type of all the given instructions with its exact 32 bits instruction code in the desired instruction type format
+##### Task 3: Task is to identify instruction type of all the given instructions with its exact 32 bits instruction code in the desired instruction type format
 
-###### INSTRUCTIONS FORMAT IN RISC-V
+##### INSTRUCTIONS FORMAT IN RISC-V
 The instructions format of a processor is the way in which machine language instructions are structured and organized for a processor to execute. It is made up of series of 0s and 1s, each containing information about the location and operation of data.
 There are 6 instruction formats in RISC-V:
 
