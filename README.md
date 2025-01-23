@@ -4,6 +4,7 @@
 <details><summary>
 Task 1: Task is to install all the essential tools required for this internship such as Ubuntu on VMBox, Leafpad, and to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler.
 </summary>
+<br>
 1. Install Ubuntu on Virtual Machine Box
 
 ![alt text](<Task-1/virtualbox installation.png>)
@@ -62,6 +63,7 @@ Assemply code generated using -O1 option has more number of instruction as compa
 <details><summary>
 Task 2: Compile the C program using RISC-V GCC/SPIKE with the O1 and Ofast optimization options.
 </summary>
+<br>
 1. The target is to run the sum1ton.c code using both gcc compiler and riscv compiler, and both of the compiler must display the same output on the terminal. So to compile the code using gcc compiler, use the following command:
 
         gcc sum_1ton.c  
