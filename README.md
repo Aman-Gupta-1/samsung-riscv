@@ -444,17 +444,17 @@ Download the code from the reference github repo.
 2. Set Up Simulation Environment:
 Install iverlog using commands:
 
-    sudo apt-get install iverilog
-    sudo apt install gtkwave
+        sudo apt-get install iverilog
+        sudo apt install gtkwave
 
 3. To run and simulate the verilog code, enter the following command:
 
-    iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
-    ./iiitb_rv32i
+        iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+        ./iiitb_rv32i
 
 4. To see the simulation waveform in GTKWave, enter the following command:
 
-    gtkwave iiitb_rv32i.vcd
+        gtkwave iiitb_rv32i.vcd
 
 32-bits instruction used in the code:
 
