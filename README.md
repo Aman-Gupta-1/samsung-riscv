@@ -115,7 +115,8 @@ To debug the assembly instructions using spike,
 <details><summary>
 Task 3: Task is to identify instruction type of all the given instructions with its exact 32 bits instruction code in the desired instruction type format
 </summary>
-##### INSTRUCTIONS FORMAT IN RISC-V
+<br>
+INSTRUCTIONS FORMAT IN RISC-V
 The instructions format of a processor is the way in which machine language instructions are structured and organized for a processor to execute. It is made up of series of 0s and 1s, each containing information about the location and operation of data.
 There are 6 instruction formats in RISC-V:
 
@@ -430,3 +431,69 @@ Hexadecimal Code:
 
     0x0101 0113
 </details>
+
+<details><summary>
+Task 4: By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms
+</summary>
+<br>
+Steps to perform functional simulation of RISCV
+
+1. Download Files:
+Download the code from the reference github repo.
+
+2. Set Up Simulation Environment:
+Install iverlog using commands:
+
+    sudo apt-get install iverilog
+    sudo apt install gtkwave
+
+3. To run and simulate the verilog code, enter the following command:
+
+    iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+    ./iiitb_rv32i
+
+4. To see the simulation waveform in GTKWave, enter the following command:
+
+    gtkwave iiitb_rv32i.vcd
+
+32-bits instruction used in the code:
+
+![Instructions](<Task-4/instructions.png>)
+
+Analysing the Output Waveform of various instructions that we have covered in this task.
+
+1. ADD R6,R1,R2
+
+![ADD R6,R1,R2](<Task-4/ADD.jpg>)
+
+2. SUB R7,R1,R2
+
+![SUB R7,R1,R2](<Task-4/sub.jpg>)
+
+3. And R8,R1,R3
+
+![And R8,R1,R3](<Task-4/and.jpg>)
+
+4. OR R9,R2,R5
+
+![OR R9,R2,R5](<Task-4/or.jpg>)
+
+5. XOR R10,R1,R4
+
+![XOR R10,R1,R4](<Task-4/xor.jpg>)
+
+6. SLT R11,R2,R4
+
+![SLT R11,R2,R4](<Task-4/slt.jpg>)
+
+7. ADDI R12,R4,5
+
+![ADDI R12,R4,5](<Task-4/ADDI.jpg>)
+
+8. BEQ R0,R0,15
+
+![BEQ R0,R0,15](<Task-4/BEQ.jpg>)
+
+9. ADD R14,R2,R2
+
+![ADD R14,R2,R2](<Task-4/add(i11).jpg>)
