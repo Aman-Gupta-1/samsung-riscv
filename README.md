@@ -499,3 +499,76 @@ Analysing the Output Waveform of various instructions that we have covered in th
 9. ADD R14,R2,R2
 
 ![ADD R14,R2,R2](<Task-4/add(i11).jpg>)
+</details>
+
+<details><summary>
+Task 5:Task is to implement any digital circuit using VSDSquadron Mini.
+</summary>
+<br>
+ 
+**Overview**
+This project involves the implementation of a **4-bit up counter** using the **VSDSquadron Mini**, a RISC-V based SoC development kit. The 4-bit counter is a fundamental digital circuit that counts from 0 to 15, with the output displayed on external **LEDs**. This project demonstrates the use of **digital logic** and **GPIO pins** for implementing a simple counting operation and showcases the practical application of the **RISC-V architecture**. The counting operation is simulated using the **PlatformIO IDE**, and the counter's value is visually displayed by toggling LEDs connected to the **VSDSquadron Mini**.
+
+**Components Required**
+- **VSDSquadron Mini** SoC Development Kit
+- **LEDs** (4 LEDs to display the 4-bit counter output)
+- **Breadboard** (for connecting components)
+- **Jumper Wires** (for making connections)
+- **VS Code** (for software development)
+- **PlatformIO IDE** (for simulation and development)
+
+**Hardware Connections**
+- **Inputs**: There are no direct inputs required for the 4-bit counter; it operates as an autonomous counter.
+- **Outputs**: Four LEDs are connected to the GPIO pins of the **VSDSquadron Mini** to display the counter's 4-bit value. These LEDs will toggle according to the binary count (0 to 15).
+- The **GPIO pins** are configured according to the **VSDSquadron Mini Reference Manual**, ensuring the correct flow of signals between the components for accurate display of the counter output.
+
+Program:
+
+        #include<stdio.h>
+        #include<debug.h>
+        #include<ch32v00x.h>
+
+        // GPIO Configuration Function
+        void GPIO_Config(void) {
+            GPIO_InitTypeDef GPIO_InitStructure = {0}; // GPIO configuration structure
+
+            // Enable clocks for the required GPIO ports
+            RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE); // Enable clock for Port C
+
+            // Configure output pins (for LEDs)
+            GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3;
+            GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; // Configure as push-pull output
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; // Set output speed
+            GPIO_Init(GPIOC, &GPIO_InitStructure);
+        }
+
+        // Simple delay function
+        void Delay_ms(uint32_t ms) {
+            uint32_t count;
+            while (ms--) {
+            for (count = 0; count < 8000; count++); // Approx. delay for 1ms (tune as needed)
+            }
+        }
+        
+        // Main Function
+        int main(void) {
+            uint8_t counter = 0; // 4-bit counter (0 to 15)
+
+            NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); // Set priority grouping
+            SystemCoreClockUpdate();                       // Update system clock
+            Delay_Init();                                  // Initialize delay
+            GPIO_Config();                                 // Initialize GPIO
+
+            while (1) {
+            // Write the 4-bit counter value to GPIO pins
+            GPIO_Write(GPIOC, (counter & 0x0F)); // Only use the lower 4 bits of the counter
+
+            // Increment counter (wraps around after 15)
+            counter = (counter + 1) & 0x0F; // Keep counter within 4 bits
+
+            // Add a delay for visibility
+            Delay_ms(500); // 500ms delay for visible LED changes
+            }
+        }
+
+</details>
