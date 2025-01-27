@@ -502,7 +502,7 @@ Analysing the Output Waveform of various instructions that we have covered in th
 </details>
 
 <details><summary>
-Task 5:Task is to implement any digital circuit using VSDSquadron Mini.
+Task 5: Task is to implement any digital circuit using VSDSquadron Mini.
 </summary>
 <br>
  
